@@ -1,8 +1,10 @@
 import {render} from "react-dom";
 import { App } from './App'
 
+import './styles/global.scss'
+
 function Main() {
-  return <h1>Hello React!</h1>
+  return <App />
 }
 
 render(<Main></Main>, document.getElementById('root'))
