@@ -1,10 +1,10 @@
-import {render} from "react-dom";
-import { App } from './App'
+import { createRoot } from "react-dom/client";
+import { App } from "./App";
 
-import './styles/global.scss'
+import "./styles/global.scss";
 
 function Main() {
-  return <App />
+  return <App />;
 }
 
-render(<Main></Main>, document.getElementById('root'))
+createRoot(document.getElementById("root")).render(<Main></Main>);
