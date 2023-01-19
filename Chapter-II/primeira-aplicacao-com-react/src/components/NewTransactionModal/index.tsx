@@ -1,7 +1,7 @@
-import { FormEvent, useContext, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
 
-import { TransactionsContext } from '../../TransactionsContext';
+import { useTransactions } from '../../hooks/useTransactions';
 
 import { Container, RadioBox, TransactionTypeContainer } from './styles';
 
@@ -22,7 +22,7 @@ export function NewTransactionModal({
   isOpen,
   onRequestClose,
 }: NewTransactionModalProps) {
-  const { createTransaction } = useContext(TransactionsContext);
+  const { createTransaction } = useTransactions();
 
   const [transactionTitle, setTransactionTitle] = useState('');
   const [transactionValue, setTransactionValue] = useState(0);
